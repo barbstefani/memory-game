@@ -23,19 +23,21 @@ let firstCard = "";
 let secondCard = "";
 
 const checkCards = () => {
-  const firstCharacter = firstCard.getAttribute("data-character");
+  const firstCharacter = firstCard.getAttribute("data-character");  
   const secondCharacter = secondCard.getAttribute("data-character");
 
-  if (firstCharacter == secondCard) {
-    firstCard.classList.classList.add("disabled-card");
-    secondCard.classList.classList.add("disabled-card");
+  if (firstCharacter == secondCharacter) {
+    firstCard.firstChild.classList.add("disabled-card");
+    secondCard.firstChild.classList.add("disabled-card");
 
     firstCard = "";
     secondCard = "";
+
   } else {
     setTimeout(() => {
       firstCard.classList.remove("reveal-card");
       secondCard.classList.remove("reveal-card");
+      
 
       firstCard = "";
       secondCard = "";
@@ -54,9 +56,11 @@ const revealCard = ({ target }) => {
   } else if (secondCard === "") {
     target.parentNode.classList.add("reveal-card");
     secondCard = target.parentNode;
+    checkCards();
   }
 
-  checkCards();
+  console.log("action")
+
 };
 
 const creatCard = (character) => {
