@@ -27,11 +27,11 @@
     border-radius: 5px;
     background-size: cover;
     background-position: center;
+    transition: all 400ms ease;
 }
 
 .front{
     transform: rotateY(180deg);
-    
 }
 
 .back{
@@ -46,7 +46,7 @@
 }
 
 .disabled-card{
-    filter: saturate(0);
+    filter: saturate(0);    
     opacity: 0.5;
 }
 
