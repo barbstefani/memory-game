@@ -1,4 +1,25 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 50px;
+}
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px;
+}
   
 
 .grid{
